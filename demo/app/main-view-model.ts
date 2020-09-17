@@ -1,6 +1,5 @@
 import { Observable, Page, Repeater, StackLayout } from '@nativescript/core';
-import { MultiSelect, AShowType } from 'nativescript-multi-select';
-import { MSOption } from 'nativescript-multi-select';
+import { MultiSelect, AShowType, MSOption } from 'nativescript-multi-select';
 
 export class HelloWorldModel extends Observable {
   private _MSelect: MultiSelect;
