@@ -1,6 +1,5 @@
 import { MSOption } from "./multi-select.common";
-import { Color } from "tns-core-modules/color/color";
-import * as application from "tns-core-modules/application";
+import { Application, Color } from "@nativescript/core";
 
 declare var com;
 
@@ -80,7 +79,7 @@ export class MultiSelect {
         // Show
         (MSSelect as any)
             .show(
-                application.android.foregroundActivity.getSupportFragmentManager(),
+                Application.android.foregroundActivity.getSupportFragmentManager(),
                 'multiSelectDialog'
             );
     }

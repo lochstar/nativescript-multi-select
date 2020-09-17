@@ -1,5 +1,5 @@
 import { MSOption } from "./multi-select.common";
-import { Color } from "tns-core-modules/color/color";
+import { Color } from "@nativescript/core";
 
 declare var AAMultiSelectViewController;
 
