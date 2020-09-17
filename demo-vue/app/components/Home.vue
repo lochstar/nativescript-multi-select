@@ -3,14 +3,14 @@
     <ActionBar class="action-bar">
       <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
-  
+
     <GridLayout rows="* auto">
       <StackLayout row="0" class="p-20">
         <GridLayout v-for="(item, index) in selectedItems" :key="index" rows="auto">
           <Label :text="item" class="text-center p-10" textWrap="true" />
         </GridLayout>
       </StackLayout>
-  
+
       <StackLayout row="1" class="p-10">
         <Button class="btn btn-primary" text="select" @tap="onSelectTapped"></Button>
       </StackLayout>
@@ -24,12 +24,11 @@
     AShowType
   } from "nativescript-multi-select";
   const MSelect = new MultiSelect();
-  let predefinedItems = ["moi-a", "moi-b"];
-  
+
   export default {
     data() {
       return {
-        selectedItems: []
+        selectedItems: ["moi-a", "moi-b"]
       }
     },
     methods: {
@@ -37,7 +36,7 @@
         const that = this;
         const options = {
           title: "Please Select",
-          selectedItems: predefinedItems,
+          selectedItems: this.selectedItems,
           items: [{
               name: "A",
               value: "moi-a"
@@ -59,7 +58,6 @@
           displayLabel: "name",
           onConfirm: _selectedItems => {
             that.selectedItems = _selectedItems;
-            predefinedItems = _selectedItems;
             console.log("SELECTED ITEMS => ", _selectedItems);
           },
           onItemSelected: selectedItem => {
@@ -81,7 +79,7 @@
             showType: AShowType.TypeBounceIn
           }
         };
-  
+
         MSelect.show(options);
       }
     }
@@ -89,15 +87,5 @@
 </script>
 
 <style scoped lang="scss">
-  // Start custom common variables
-  @import "../app-variables";
-  // End custom common variables
-  // Custom styles
-  .fa {
-    color: $accent-dark;
-  }
-  
-  .info {
-    font-size: 20;
-  }
+
 </style>
