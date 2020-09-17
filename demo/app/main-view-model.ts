@@ -1,9 +1,8 @@
 import { Observable, Page, Repeater, StackLayout } from '@nativescript/core';
-import { MultiSelect, AShowType, MSOption } from 'nativescript-multi-select';
+import { MultiSelect, AShowType, MSOption } from '@codelab/nativescript-multi-select';
 
 export class HelloWorldModel extends Observable {
   private _MSelect: MultiSelect;
-  private predefineItems: Array<any>;
   private repeater: Repeater;
   public selectedItems: Array<any>;
 
@@ -12,7 +11,7 @@ export class HelloWorldModel extends Observable {
 
     this.repeater = new Repeater();
     this._MSelect = new MultiSelect();
-    this.predefineItems = ["moi-a", "moi-b"];
+    this.selectedItems = ["moi-a", "moi-b"];
 
     const stackLayoutContainer = page.getViewById<StackLayout>("stackLayoutId");
     const stackLayout = new StackLayout();
@@ -27,7 +26,7 @@ export class HelloWorldModel extends Observable {
   public onSelectTapped(): void {
     const options: MSOption = {
       title: "Please Select",
-      selectedItems: this.predefineItems,
+      selectedItems: this.selectedItems,
       items: [
         { name: "A", value: "moi-a" },
         { name: "B", value: "moi-b" },
@@ -40,7 +39,6 @@ export class HelloWorldModel extends Observable {
         this.selectedItems = selectedItems;
         this.repeater.items = this.selectedItems;
         this.repeater.refresh();
-        this.predefineItems = selectedItems;
         console.log("SELECTED ITEMS => ", selectedItems);
       },
       onItemSelected: selectedItem => {

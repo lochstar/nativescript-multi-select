@@ -19,71 +19,71 @@
 </template>
 
 <script>
-  import {
-    MultiSelect,
-    AShowType
-  } from "nativescript-multi-select";
-  const MSelect = new MultiSelect();
+import {
+  MultiSelect,
+  AShowType
+} from "@codelab/nativescript-multi-select";
+const MSelect = new MultiSelect();
 
-  export default {
-    data() {
-      return {
-        selectedItems: ["moi-a", "moi-b"]
-      }
-    },
-    methods: {
-      onSelectTapped() {
-        const that = this;
-        const options = {
-          title: "Please Select",
-          selectedItems: this.selectedItems,
-          items: [{
-              name: "A",
-              value: "moi-a"
-            },
-            {
-              name: "B",
-              value: "moi-b"
-            },
-            {
-              name: "C",
-              value: "moi-c"
-            },
-            {
-              name: "D",
-              value: "moi-d"
-            }
-          ],
-          bindValue: "value",
-          displayLabel: "name",
-          onConfirm: _selectedItems => {
-            that.selectedItems = _selectedItems;
-            console.log("SELECTED ITEMS => ", _selectedItems);
-          },
-          onItemSelected: selectedItem => {
-            console.log("SELECTED ITEM => ", selectedItem);
-          },
-          onCancel: () => {
-            console.log("CANCEL");
-          },
-          android: {
-            titleSize: 25,
-            cancelButtonTextColor: "#252323",
-            confirmButtonTextColor: "#70798C"
-          },
-          ios: {
-            cancelButtonBgColor: "#252323",
-            confirmButtonBgColor: "#70798C",
-            cancelButtonTextColor: "#ffffff",
-            confirmButtonTextColor: "#ffffff",
-            showType: AShowType.TypeBounceIn
-          }
-        };
-
-        MSelect.show(options);
-      }
+export default {
+  data() {
+    return {
+      selectedItems: ["moi-a", "moi-b"]
     }
-  };
+  },
+  methods: {
+    onSelectTapped() {
+      const that = this;
+      const options = {
+        title: "Please Select",
+        selectedItems: this.selectedItems,
+        items: [{
+            name: "A",
+            value: "moi-a"
+          },
+          {
+            name: "B",
+            value: "moi-b"
+          },
+          {
+            name: "C",
+            value: "moi-c"
+          },
+          {
+            name: "D",
+            value: "moi-d"
+          }
+        ],
+        bindValue: "value",
+        displayLabel: "name",
+        onConfirm: _selectedItems => {
+          that.selectedItems = _selectedItems;
+          console.log("SELECTED ITEMS => ", _selectedItems);
+        },
+        onItemSelected: selectedItem => {
+          console.log("SELECTED ITEM => ", selectedItem);
+        },
+        onCancel: () => {
+          console.log("CANCEL");
+        },
+        android: {
+          titleSize: 25,
+          cancelButtonTextColor: "#252323",
+          confirmButtonTextColor: "#70798C"
+        },
+        ios: {
+          cancelButtonBgColor: "#252323",
+          confirmButtonBgColor: "#70798C",
+          cancelButtonTextColor: "#ffffff",
+          confirmButtonTextColor: "#ffffff",
+          showType: AShowType.TypeBounceIn
+        }
+      };
+
+      MSelect.show(options);
+    }
+  }
+};
 </script>
 
 <style scoped lang="scss">

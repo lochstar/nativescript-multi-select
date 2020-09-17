@@ -7,7 +7,7 @@ export default {
     v8Flags: '--expose_gc',
     markingMode: 'none',
     requireModules: {
-      0: 'nativescript-multi-select',
+      0: '@codelab/nativescript-multi-select',
     },
   },
   appPath: 'app',
