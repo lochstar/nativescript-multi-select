@@ -94,7 +94,7 @@ export class MultiSelect {
 
             // assign cancel button text color
             if (_ios.cancelButtonTextColor) {
-                this.MSSelect.confirmButtonTitleColor = new Color(_ios.cancelButtonTextColor).ios;
+                this.MSSelect.cancelButtonTitleColor = new Color(_ios.cancelButtonTextColor).ios;
             }
 
             // assign confirm text color
