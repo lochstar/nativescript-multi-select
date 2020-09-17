@@ -1,7 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import { Page } from 'tns-core-modules/ui/page/page';
-import { Repeater } from 'tns-core-modules/ui/repeater';
-import { StackLayout } from 'tns-core-modules/ui/layouts/stack-layout';
+import { Observable, Page, Repeater, StackLayout } from '@nativescript/core';
 import { MultiSelect, AShowType } from 'nativescript-multi-select';
 import { MSOption } from 'nativescript-multi-select';
 
