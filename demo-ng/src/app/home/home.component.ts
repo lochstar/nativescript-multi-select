@@ -7,7 +7,6 @@ import { MultiSelect, AShowType, MSOption } from '@codelab/nativescript-multi-se
   templateUrl: "./home.component.html"
 })
 export class HomeComponent implements OnInit {
-
   private _MSelect: MultiSelect;
   private predefinedItems: Array<any>;
   public selectedItems: Array<any>;
@@ -39,7 +38,7 @@ export class HomeComponent implements OnInit {
           this.selectedItems = selectedItems;
           this.predefinedItems = selectedItems;
           console.log("SELECTED ITEMS => ", selectedItems);
-        })
+        });
       },
       onItemSelected: selectedItem => {
         console.log("SELECTED ITEM => ", selectedItem);
