@@ -1,6 +1,5 @@
 import { MSOption } from "./multi-select.common";
-import { Color } from "tns-core-modules/color/color";
-import * as application from "tns-core-modules/application";
+import { Application, Color } from "@nativescript/core";
 
 declare var com;
 
@@ -42,7 +41,7 @@ export class MultiSelect {
             .negativeText(options.cancelButtonText ? options.cancelButtonText : "cancel")
 
             // assign cancel button text color
-            .positiveTextColor(options.android ? options.android.cancelButtonTextColor ? new Color(options.android.cancelButtonTextColor).android : null : null)
+            .negativeTextColor(options.android ? options.android.cancelButtonTextColor ? new Color(options.android.cancelButtonTextColor).android : null : null)
 
             .setMinSelectionLimit(0)
 
@@ -80,7 +79,7 @@ export class MultiSelect {
         // Show
         (MSSelect as any)
             .show(
-                application.android.foregroundActivity.getSupportFragmentManager(),
+                Application.android.foregroundActivity.getSupportFragmentManager(),
                 'multiSelectDialog'
             );
     }

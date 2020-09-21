@@ -1,6 +1,5 @@
 import { Component, OnInit, NgZone } from "@angular/core";
-import { MultiSelect, AShowType } from 'nativescript-multi-select';
-import { MSOption } from 'nativescript-multi-select';
+import { MultiSelect, AShowType, MSOption } from '@codelab/nativescript-multi-select';
 
 @Component({
   selector: "Home",
@@ -8,7 +7,6 @@ import { MSOption } from 'nativescript-multi-select';
   templateUrl: "./home.component.html"
 })
 export class HomeComponent implements OnInit {
-
   private _MSelect: MultiSelect;
   private predefinedItems: Array<any>;
   public selectedItems: Array<any>;
@@ -22,7 +20,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // Init your component properties here.
   }
-
 
   public onSelectTapped(): void {
     const options: MSOption = {
@@ -41,7 +38,7 @@ export class HomeComponent implements OnInit {
           this.selectedItems = selectedItems;
           this.predefinedItems = selectedItems;
           console.log("SELECTED ITEMS => ", selectedItems);
-        })
+        });
       },
       onItemSelected: selectedItem => {
         console.log("SELECTED ITEM => ", selectedItem);

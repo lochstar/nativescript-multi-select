@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "target": "es2017",
+        "module": "esnext",
         "baseUrl": "./",
         "paths": {
             "*": ["./node_modules/tns-core-modules/*", "./node_modules/*"],

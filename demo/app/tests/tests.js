@@ -1,4 +1,4 @@
-var MultiSelect = require("nativescript-multi-select").MultiSelect;
+var MultiSelect = require("@codelab/nativescript-multi-select").MultiSelect;
 var multiSelect = new MultiSelect();
 
 describe("greet function", function() {

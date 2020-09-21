@@ -1,20 +1,15 @@
 {
-  "nativescript": {
-    "id": "org.nativescript.demo",
-    "tns-ios": {
-      "version": "5.0.0"
-    },
-    "tns-android": {
-      "version": "5.1.0"
-    }
-  },
+  "main": "app.js",
   "dependencies": {
-    "nativescript-multi-select": "file:../src",
-    "nativescript-theme-core": "^1.0.4",
-    "tns-core-modules": "^5.1.0"
+    "@codelab/nativescript-multi-select": "file:../src",
+    "@nativescript/core": "7.0.0",
+    "@nativescript/webpack": "3.0.0",
+    "nativescript-theme-core": "^1.0.4"
   },
   "devDependencies": {
-    "nativescript-unit-test-runner": "^0.3.4",
+    "@nativescript/android": "7.0.0",
+    "@nativescript/ios": "7.0.0",
+    "@nativescript/types": "7.0.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.18",
@@ -28,10 +23,9 @@
     "nativescript-css-loader": "~0.26.1",
     "nativescript-dev-appium": "next",
     "nativescript-dev-typescript": "~0.7.9",
-    "nativescript-dev-webpack": "~0.19.0",
-    "tns-platform-declarations": "^5.1.0",
+    "nativescript-unit-test-runner": "^0.3.4",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.1"
+    "typescript": "3.9.7"
   },
   "scripts": {
     "build.plugin": "cd ../src && npm run build",

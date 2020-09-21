@@ -1,30 +1,23 @@
 {
-    "nativescript": {
-        "id": "org.nativescript.demovue",
-        "tns-android": {
-            "version": "5.1.0"
-        },
-        "tns-ios": {
-            "version": "5.1.0"
-        }
-    },
+    "readme": "NativeScript Application",
     "description": "NativeScript Application",
     "license": "SEE LICENSE IN <your-license-filename>",
     "repository": "<fill-your-repository-here>",
+    "main": "app.js",
     "dependencies": {
-        "nativescript-multi-select": "file:../publish/package/nativescript-multi-select-1.0.6.tgz",
+        "@codelab/nativescript-multi-select": "file:../publish/package/codelab-nativescript-multi-select-2.0.0.tgz",
+        "@nativescript/core": "7.0.0",
+        "@nativescript/webpack": "3.0.0",
         "nativescript-theme-core": "~1.0.4",
-        "nativescript-vue": "~2.0.0",
-        "tns-core-modules": "~5.1.0"
+        "nativescript-vue": "2.8.0"
     },
     "devDependencies": {
         "@babel/core": "~7.1.0",
         "@babel/preset-env": "~7.1.0",
+        "@nativescript/ios": "7.0.0",
         "babel-loader": "~8.0.0",
-        "nativescript-dev-webpack": "~0.19.0",
-        "nativescript-vue-template-compiler": "~2.0.0",
-        "node-sass": "~4.9.0",
-        "vue-loader": "~15.4.0"
-    },
-    "readme": "NativeScript Application"
+        "nativescript-vue-template-compiler": "2.8.0",
+        "sass": "^1.26.10",
+        "vue-loader": "15.9.3"
+    }
 }
