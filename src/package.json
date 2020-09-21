@@ -47,14 +47,14 @@
         "Multi Select Dialog"
     ],
     "author": {
-        "name": "Jonathan Mayunga",
-        "email": "mayunga.j@gmail.com"
+        "name": "Lochlan McBride",
+        "email": "lochlan@gmail.com"
     },
     "bugs": {
-        "url": "https://github.com/skhye05/nativescript-multi-select/issues"
+        "url": "https://github.com/lochstar/nativescript-multi-select/issues"
     },
     "license": "Apache-2.0",
-    "homepage": "https://github.com/skhye05/nativescript-multi-select",
+    "homepage": "https://github.com/lochstar/nativescript-multi-select",
     "readmeFilename": "README.md",
     "devDependencies": {
         "@nativescript/core": "~7.0.0",
