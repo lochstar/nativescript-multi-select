@@ -1,11 +1,11 @@
-# Nativescript Multi Select ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png) 
+# Nativescript Multi Select ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
 
 [![npm](https://img.shields.io/npm/v/nativescript-multi-select.svg)](https://www.npmjs.com/package/nativescript-multi-select)
 [![npm](https://img.shields.io/npm/dt/nativescript-multi-select.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-multi-select)
 
 ## Overview
 
- Nativescript Multi Select is a popup dialog which provides multi selection, search through list and return the selected items.
+Nativescript Multi Select is a popup dialog which provides multi selection, search through list and return the selected items.
 
 <p>
   <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Multi-Select/master/ios.gif"  width="300"/>
@@ -15,7 +15,7 @@
 ## Installation
 
 ```javascript
-tns plugin add nativescript-multi-select
+tns plugin add @codelab/nativescript-multi-select
 ```
 
 ## Usage
@@ -23,8 +23,7 @@ tns plugin add nativescript-multi-select
 ### <img src="https://raw.githubusercontent.com/skhye05/NativeScript-Multi-Select/master/res/typescript.png" width="20"/> TypeScript
 
 ```typescript
-import { MultiSelect, AShowType } from 'nativescript-multi-select';
-import { MSOption } from 'nativescript-multi-select';
+import { MultiSelect, AShowType, MSOption } from '@codelab/nativescript-multi-select';
 
 let MSelect = new MultiSelect();
 let selectedItems = ["moi-a", "moi-b"];
@@ -71,31 +70,27 @@ MSelect.show(options);
 
 ```typescript
 import { Component, OnInit, NgZone } from "@angular/core";
-import { MultiSelect, AShowType } from 'nativescript-multi-select';
-import { MSOption } from 'nativescript-multi-select';
+import { MultiSelect, AShowType, MSOption } from '@codelab/nativescript-multi-select';
 
 @Component({
  // ...
 })
 export class SomeComponent implements OnInit {
-
   private _MSelect: MultiSelect;
-  private predefinedItems: Array<any>;
   public selectedItems: Array<any>;
 
   constructor(private zone: NgZone) {
     this._MSelect = new MultiSelect();
-    this.predefinedItems = ["moi-a", "moi-b"];
+    this.selectedItems = ["moi-a", "moi-b"];
   }
 
   ngOnInit(): void {
   }
 
-
   public onSelectTapped(): void {
     const options: MSOption = {
       title: "Please Select",
-      selectedItems: this.predefinedItems,
+      selectedItems: this.selectedItems,
       items: [
         { name: "A", value: "moi-a" },
         { name: "B", value: "moi-b" },
@@ -107,7 +102,6 @@ export class SomeComponent implements OnInit {
       onConfirm: selectedItems => {
         this.zone.run(() => {
           this.selectedItems = selectedItems;
-          this.predefinedItems = selectedItems;
           console.log("SELECTED ITEMS => ", selectedItems);
         })
       },
@@ -145,17 +139,17 @@ export class SomeComponent implements OnInit {
     AShowType
   } from "nativescript-multi-select";
   const MSelect = new MultiSelect();
-  let predefinedItems = ["moi-a", "moi-b"];
-  
+
   export default {
     data() {
+      selectedItems: ["moi-a", "moi-b"];
     },
     methods: {
       onSelectTapped() {
         const that = this;
         const options = {
           title: "Please Select",
-          selectedItems: predefinedItems,
+          selectedItems: this.selectedItems,
           items: [{
               name: "A",
               value: "moi-a"
@@ -198,7 +192,7 @@ export class SomeComponent implements OnInit {
             showType: AShowType.TypeBounceIn
           }
         };
-  
+
         MSelect.show(options);
       }
     }

@@ -1,6 +1,6 @@
 {
-    "name": "nativescript-multi-select",
-    "version": "1.0.7",
+    "name": "@codelab/nativescript-multi-select",
+    "version": "2.0.0",
     "description": "Multi Select popup dialog.",
     "main": "multi-select",
     "typings": "index.d.ts",
@@ -29,8 +29,8 @@
         "demo.vue.android": "npm run preparedemo-vue && cd ../demo-vue && ns run android --bundle --syncAllFiles",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json && cd ../demo-ng && npx rimraf -- hooks node_modules platforms package-lock.json && cd ../demo-vue && npx rimraf -- hooks node_modules platforms package-lock.json",
         "preparedemo": "npm run tsc && npm run package && cd ../demo && ns plugin add ../publish/package/*.tgz && ns install",
-        "preparedemo-ng": "npm run tsc && npm run package && cd ../demo-ng && ns plugin remove nativescript-multi-select && ns plugin add ../publish/package/*.tgz && ns install",
-        "preparedemo-vue": "npm run tsc && npm run package && cd ../demo-vue && ns plugin remove nativescript-multi-select && ns plugin add ../publish/package/*.tgz && ns install",
+        "preparedemo-ng": "npm run tsc && npm run package && cd ../demo-ng && ns plugin remove @codelab/nativescript-multi-select && ns plugin add ../publish/package/*.tgz && ns install",
+        "preparedemo-vue": "npm run tsc && npm run package && cd ../demo-vue && ns plugin remove @codelab/nativescript-multi-select && ns plugin add ../publish/package/*.tgz && ns install",
         "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
     },

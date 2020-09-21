@@ -7,6 +7,7 @@
     "nativescript-theme-core": "^1.0.4"
   },
   "devDependencies": {
+    "@nativescript/android": "7.0.0",
     "@nativescript/ios": "7.0.0",
     "@nativescript/types": "7.0.0",
     "@types/chai": "^4.1.7",

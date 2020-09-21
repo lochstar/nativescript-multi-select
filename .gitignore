@@ -1,5 +1,6 @@
 .vscode
 .idea
+.history
 .DS_Store
 *.esm.json
 *.js
@@ -27,4 +28,3 @@ demo/report/stats.json
 **/e2e/test-results.xml
 **/package-lock.json
 **/test-results.xml
-
